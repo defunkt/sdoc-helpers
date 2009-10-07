@@ -14,6 +14,7 @@ namespace :pages do
     `ls -1 | grep -v docs | xargs rm -rf; mv docs/* .; rm -rf docs`
     `git commit -a -m "update docs"; git push origin gh-pages`
     `git checkout master`
+    puts :done
   end
 
   desc "Initialize GitHub Pages with documentation"
@@ -23,6 +24,7 @@ namespace :pages do
     `ls -1 | grep -v docs | xargs rm -rf; mv docs/* .; rm -rf docs`
     `git add .;git commit -m "create docs"; git push origin gh-pages`
     `git checkout master`
+    puts :done
   end
 
   task :check_dirty do
