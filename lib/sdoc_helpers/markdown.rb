@@ -1,5 +1,5 @@
 module SDocHelpers
-  module Markdown
+  module MarkdownFiles
     def description
       return super unless full_name =~ /\.(md|markdown)$/
       # assuming your path is ROOT/html or ROOT/doc
@@ -19,7 +19,7 @@ end
 
 begin
   require 'rdiscount'
-  RDoc::TopLevel.send :include, SDocHelpers::Markdown
+  RDoc::TopLevel.send :include, SDocHelpers::MarkdownFiles
 rescue LoadError
   puts "Markdown support not enabled. Please install RDiscount."
 end
