@@ -14,7 +14,7 @@ namespace :pages do
   task :publish => [ :check_dirty, :rerdoc ] do
     `git checkout gh-pages`
     `ls -1 | grep -v docs | xargs rm -rf; mv docs/* .; rm -rf docs`
-    `git commit -a -m "update docs"; git push origin gh-pages`
+    `git add .; git commit -m "update docs"; git push origin gh-pages`
     `git checkout master`
     puts :done
   end
