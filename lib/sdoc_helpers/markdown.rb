@@ -1,10 +1,3 @@
-begin
-  require 'rdiscount'
-  RDoc::TopLevel.send :include, SDoc::MarkdownSupport
-rescue LoadError
-  puts "Markdown support not enabled. Please install RDiscount."
-end
-
 module SDocHelpers
   module Markdown
     def description
@@ -22,4 +15,11 @@ module SDocHelpers
 html
     end
   end
+end
+
+begin
+  require 'rdiscount'
+  RDoc::TopLevel.send :include, SDocHelpers::Markdown
+rescue LoadError
+  puts "Markdown support not enabled. Please install RDiscount."
 end
