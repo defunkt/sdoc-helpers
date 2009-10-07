@@ -36,6 +36,12 @@ Dependencies
 * sdoc
 
 
+Installation
+------------
+
+    gem install sdoc-helpers
+
+
 Author
 ------
 
