@@ -28,4 +28,15 @@ nicely formatted README on GitHub as well as in your sdoc.
 
 Enjoy.
 
+
+Dependencies
+------------
+
+* rdiscount
+* sdoc
+
+
+Author
+------
+
 Chris Wanstrath // chris@ozmm.org
