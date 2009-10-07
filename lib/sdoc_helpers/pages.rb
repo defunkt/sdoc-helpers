@@ -1,10 +1,12 @@
 require 'rake/rdoctask'
 
 readme = Dir['*'].grep(/README/)[0]
+files = [ readme, 'LICENSE', 'lib' ]
+files.push('CONTRIBUTORS') if Dir['*'].include?('CONTRIBUTORS')
 
 Rake::RDocTask.new do |rdoc|
   rdoc.main = readme
-  rdoc.rdoc_files = [ readme, 'LICENSE', 'lib' ]
+  rdoc.rdoc_files = files
   rdoc.rdoc_dir = 'docs'
 end
 
