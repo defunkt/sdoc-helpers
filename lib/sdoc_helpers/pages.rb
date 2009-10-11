@@ -7,7 +7,7 @@ files = [ readme, 'LICENSE', 'lib' ]
 files += Dir['*.md']
 
 # any files that are ALLCAPS
-files += Dir['*'].select { |file| file =~ /^[A-Z$/ }
+files += Dir['*'].select { |file| file =~ /^[A-Z]$/ }
 
 files.push('CONTRIBUTORS') if Dir['*'].include?('CONTRIBUTORS')
 
