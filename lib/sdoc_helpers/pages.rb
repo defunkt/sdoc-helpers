@@ -2,6 +2,13 @@ require 'rake/rdoctask'
 
 readme = Dir['*'].grep(/README/)[0]
 files = [ readme, 'LICENSE', 'lib' ]
+
+# any markdown files in the root
+files += Dir['*.md']
+
+# any files that are ALLCAPS
+files += Dir['*'].select { |file| file =~ /^[A-Z$/ }
+
 files.push('CONTRIBUTORS') if Dir['*'].include?('CONTRIBUTORS')
 
 Rake::RDocTask.new do |rdoc|
