@@ -12,6 +12,8 @@ begin
     gemspec.homepage = "http://github.com/defunkt/sdoc-helpers"
     gemspec.authors = ["Chris Wanstrath"]
     gemspec.version = SDocHelpers::Version.to_s
+
+    gemspec.add_dependency('sdoc', '~> 0.2')
   end
 rescue LoadError
   puts "Jeweler not available."
