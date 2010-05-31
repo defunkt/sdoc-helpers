@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files            += Dir.glob("man/**/*")
   s.files            += Dir.glob("test/**/*")
 
-  s.add_dependency    'sdoc', '~> 0.2')
+  s.add_dependency    'sdoc', '~> 0.2'
   s.description       = <<desc
   Makes publishing docs with sdoc slightly more pleasant by adding
   support for README.markdown and other small tweaks.
